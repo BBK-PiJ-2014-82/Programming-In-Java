@@ -7,20 +7,16 @@ public class Lesson_5_2_2_Fibonacci_Recursive {
         Scanner s = new Scanner(System.in);
         System.out.print("Enter your integer here: ");
         int yourInt = s.nextInt();
-        int fibonacci = 2;
+        int fibonacci;
         
-        if(yourInt <= 2){
-            fibonacci = 1;
-        }
-        else{
-            
-        }
-        
-        System.out.println(fibonacci);
+        System.out.println(fibonacciRecursive(yourInt));
     }
     
-    static int fibonacciRecursive(){
-       
+    static int fibonacciRecursive(int yourInt){
+        if(yourInt < 3){
+            return 1;
+        }
+        return fibonacciRecursive(yourInt-1) + fibonacciRecursive(yourInt-2);
     }
 
 }
